@@ -3,8 +3,8 @@ services:
   mongoservice:
     image: mongo:latest
     container_name: mongo-container
-    #hostname: localhost
-    #network_mode: host
+    hostname: localhost
+    network_mode: host
     ports:
       - 27017:27017
     restart: always
@@ -12,8 +12,8 @@ services:
   mysql:
     image: mysql:latest
     container_name: mysql-container
-    #hostname: localhost
-    #network_mode: host
+    hostname: localhost
+    network_mode: host
     ports:
       - 3306:3306
     environment:
@@ -25,8 +25,8 @@ services:
   rabbitmq:
     image: rabbitmq:management
     container_name: rabbitmq
-    #hostname: localhost
-    #network_mode: host
+    hostname: localhost
+    network_mode: host
     ports:
       - 5672:5672
       - 15672:15672
@@ -39,8 +39,8 @@ services:
     container_name: config-server
     build: config-server/
     image: sajalra/capstone:config-server
-    #hostname: localhost
-    #network_mode: host
+    hostname: localhost
+    network_mode: host
     ports:
       - 8888:8888
     restart: always
@@ -49,8 +49,8 @@ services:
     container_name: eureka-server
     build: eureka-server/
     image: sajalra/capstone:eureka-server
-    #hostname: localhost
-    #network_mode: host
+    hostname: localhost
+    network_mode: host
     ports:
       - 8671:8671
     restart: always
@@ -59,8 +59,8 @@ services:
     container_name: api-gateway
     build: api-gateway/
     image: sajalra/capstone:api-gateway
-    #hostname: localhost
-    #network_mode: host
+    hostname: localhost
+    network_mode: host
     ports:
       - 8080:8080
     depends_on:
@@ -71,8 +71,8 @@ services:
     container_name: authentication-service
     build: authentication-service/
     image: sajalra/capstone:authentication-server
-    #hostname: localhost
-    #network_mode: host
+    hostname: localhost
+    network_mode: host
     ports:
       - 8082:8082
     depends_on:
@@ -86,8 +86,8 @@ services:
     container_name: event-details-service
     build: event-details-service/
     image: sajalra/capstone:event-details-service
-    #hostname: localhost
-    #network_mode: host
+    hostname: localhost
+    network_mode: host
     ports:
       - 8090:8090
     depends_on:
@@ -100,8 +100,8 @@ services:
     container_name: payment-service
     build: payment-service/
     image: sajalra/capstone:payment-service
-    #hostname: localhost
-    #network_mode: host
+    hostname: localhost
+    network_mode: host
     ports:
       - 8088:8088
     depends_on:
@@ -114,8 +114,8 @@ services:
     container_name: registration-service
     build: registration-service/
     image: sajalra/capstone:registration-server
-    #hostname: localhost
-    #network_mode: host
+    hostname: localhost
+    network_mode: host
     ports:
       - 8086:8086
     depends_on:
@@ -129,8 +129,8 @@ services:
     container_name: email-notification-service
     build: email-notification-service/
     image: sajalra/capstone:email-server
-    #hostname: localhost
-    #network_mode: host
+    hostname: localhost
+    network_mode: host
     ports:
       - 8099:8099
     depends_on:
@@ -143,8 +143,8 @@ services:
     container_name: booking-ticket-service
     build: booking-ticket-service/
     image: sajalra/capstone:booking-ticket-service
-    #hostname: localhost
-    #network_mode: host
+    hostname: localhost
+    network_mode: host
     ports:
       - 8085:8085
     depends_on:
@@ -158,8 +158,8 @@ services:
     build: product-webapp/
     image: sajalra/capstone:product-webapp-server
     container_name: product-webapp
-    #network_mode: host
-    #hostname: localhost
+    network_mode: host
+    hostname: localhost
     ports:
       - 4200:4200
     restart: always
